@@ -1,0 +1,37 @@
+nohup: ignoring input
+/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/requests/__init__.py:102: RequestsDependencyWarning: urllib3 (1.26.11) or chardet (5.1.0)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({})/charset_normalizer ({}) doesn't match a supported "
+dataset size 12000
+missing keys:
+['visual.projection_head.0.weight', 'visual.projection_head.0.bias', 'visual.projection_head.2.weight', 'visual.projection_head.2.bias']
+Model parameters: 150,408,193
+Input resolution: 224
+Context length: 77
+Vocab size: 49408
+==============================
+caltech101
+
+  0%|          | 0/14 [00:00<?, ?it/s]
+  0%|          | 0/14 [00:10<?, ?it/s]
+Traceback (most recent call last):
+  File "scd-bert.py/sssa/e 520, in <module>
+    logits = model.visual.extract_features(images)
+  File "/home/sheng/MUST/clip/model.py", line 611, in extract_features
+    x = self.transformer(x)                          
+  File "/home/sheng/sssa/nda3/envs/gcd/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sheng/MUST/clip/model.py", line 494, in forward
+    x = block(x, attn_mask=attn_mask)    
+  File "/home/sheng/sssa/nda3/envs/gcd/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sheng/MUST/clip/model.py", line 465, in forward
+    x_ffn = self.mlp(self.ln_2(x))
+  File "/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/torch/nn/modules/container.py", line 141, in forward
+    input = module(input)
+  File "/home/sheng/sssa/nda3/envs/gcd/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/sheng/MUST/clip/model.py", line 430, in forward
+    return x * torch.sigmoid(1.702 * x)
+RuntimeError: CUDA out of memory. Tried to allocate 592.00 MiB (GPU 3; 47.54 GiB total capacity; 2.81 GiB already allocated; 145.88 MiB free; 4.46 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

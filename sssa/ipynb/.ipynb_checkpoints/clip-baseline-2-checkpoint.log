@@ -1,0 +1,36 @@
+nohup: ignoring input
+/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/requests/__init__.py:102: RequestsDependencyWarning: urllib3 (1.26.11) or chardet (5.1.0)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({})/charset_normalizer ({}) doesn't match a supported "
+==============================
+imagenet
+missing keys:
+['visual.projection_head.0.weight', 'visual.projection_head.0.bias', 'visual.projection_head.2.weight', 'visual.projection_head.2.bias']
+Model parameters: 150,408,193
+Input resolution: 224
+Context length: 77
+Vocab size: 49408
+dataset size 127115
+  0%|          | 0/497 [00:00<?, ?it/s]  0%|          | 0/497 [00:12<?, ?it/s]
+Traceback (most recent call last):
+  File "clip-baseline-2.py", line 270, in <module>
+    logits = model.visual.extract_vfeatures(images)
+  File "/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1185, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'VisionTransformer_MIM' object has no attribute 'extract_vfeatures'
+nohup: ignoring input
+/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/requests/__init__.py:102: RequestsDependencyWarning: urllib3 (1.26.11) or chardet (5.1.0)/charset_normalizer (2.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({})/charset_normalizer ({}) doesn't match a supported "
+==============================
+imagenet
+missing keys:
+['visual.projection_head.0.weight', 'visual.projection_head.0.bias', 'visual.projection_head.2.weight', 'visual.projection_head.2.bias']
+Model parameters: 150,408,193
+Input resolution: 224
+Context length: 77
+Vocab size: 49408
+dataset size 127115
+  0%|          | 0/497 [00:00<?, ?it/s]  0%|          | 0/497 [00:12<?, ?it/s]
+Traceback (most recent call last):
+  File "clip-baseline-2.py", line 272, in <module>
+    similarity = model.logit_scale.exp() * logits @ classifier.t()
+NameError: name 'classifier' is not defined
