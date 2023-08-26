@@ -1,13 +1,0 @@
-nohup: ignoring input
-/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/requests/__init__.py:102: RequestsDependencyWarning: urllib3 (1.26.11) or chardet (5.1.0)/charset_normalizer (2.0.4) doesn't match a supported version!
-  warnings.warn("urllib3 ({}) or chardet ({})/charset_normalizer ({}) doesn't match a supported "
-==============================
-imagenet
-missing keys:
-['visual.projection_head.0.weight', 'visual.projection_head.0.bias', 'visual.projection_head.2.weight', 'visual.projection_head.2.bias']
-Model parameters: 150,408,193
-Input resolution: 224
-Context length: 77
-Vocab size: 49408
-  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.10it/s]100%|██████████| 1/1 [00:00<00:00,  1.10it/s]
-  0%|          | 0/497 [00:00<?, ?it/s]  0%|          | 1/497 [00:03<24:59,  3.02s/it]  0%|          | 2/497 [00:03<11:44,  1.42s/it]

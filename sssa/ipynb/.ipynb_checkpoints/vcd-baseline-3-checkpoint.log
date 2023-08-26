@@ -1,63 +1,0 @@
-nohup: ignoring input
-/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/requests/__init__.py:102: RequestsDependencyWarning: urllib3 (1.26.11) or chardet (5.1.0)/charset_normalizer (2.0.4) doesn't match a supported version!
-  warnings.warn("urllib3 ({}) or chardet ({})/charset_normalizer ({}) doesn't match a supported "
-missing keys:
-['visual.projection_head.0.weight', 'visual.projection_head.0.bias', 'visual.projection_head.2.weight', 'visual.projection_head.2.bias']
-Model parameters: 150,408,193
-Input resolution: 224
-Context length: 77
-Vocab size: 49408
-==============================
-dataset=sdogs
-  0%|          | 0/47 [00:00<?, ?it/s]  2%|▏         | 1/47 [00:04<03:43,  4.86s/it]  4%|▍         | 2/47 [00:05<01:38,  2.19s/it]  6%|▋         | 3/47 [00:05<00:59,  1.34s/it]  9%|▊         | 4/47 [00:05<00:40,  1.07it/s] 11%|█         | 5/47 [00:06<00:32,  1.31it/s] 13%|█▎        | 6/47 [00:06<00:24,  1.64it/s] 15%|█▍        | 7/47 [00:06<00:20,  1.95it/s] 17%|█▋        | 8/47 [00:07<00:22,  1.75it/s] 19%|█▉        | 9/47 [00:09<00:32,  1.17it/s] 21%|██▏       | 10/47 [00:09<00:25,  1.45it/s] 23%|██▎       | 11/47 [00:09<00:20,  1.73it/s] 26%|██▌       | 12/47 [00:10<00:26,  1.30it/s] 28%|██▊       | 13/47 [00:12<00:30,  1.11it/s] 30%|██▉       | 14/47 [00:12<00:24,  1.36it/s] 32%|███▏      | 15/47 [00:12<00:19,  1.64it/s] 34%|███▍      | 16/47 [00:14<00:26,  1.19it/s] 36%|███▌      | 17/47 [00:15<00:26,  1.14it/s] 38%|███▊      | 18/47 [00:15<00:20,  1.41it/s] 40%|████      | 19/47 [00:15<00:16,  1.70it/s] 43%|████▎     | 20/47 [00:16<00:20,  1.32it/s] 45%|████▍     | 21/47 [00:17<00:21,  1.23it/s] 47%|████▋     | 22/47 [00:18<00:16,  1.48it/s] 49%|████▉     | 23/47 [00:18<00:15,  1.57it/s] 51%|█████     | 24/47 [00:20<00:19,  1.20it/s] 53%|█████▎    | 25/47 [00:21<00:20,  1.09it/s] 55%|█████▌    | 26/47 [00:21<00:15,  1.35it/s] 57%|█████▋    | 27/47 [00:21<00:12,  1.62it/s] 60%|█████▉    | 28/47 [00:23<00:17,  1.08it/s] 62%|██████▏   | 29/47 [00:24<00:14,  1.20it/s] 64%|██████▍   | 30/47 [00:24<00:11,  1.47it/s] 66%|██████▌   | 31/47 [00:24<00:09,  1.73it/s] 68%|██████▊   | 32/47 [00:26<00:13,  1.10it/s] 70%|███████   | 33/47 [00:27<00:11,  1.24it/s] 72%|███████▏  | 34/47 [00:27<00:08,  1.50it/s] 74%|███████▍  | 35/47 [00:27<00:06,  1.77it/s] 77%|███████▋  | 36/47 [00:29<00:10,  1.09it/s] 79%|███████▊  | 37/47 [00:30<00:08,  1.19it/s] 81%|████████  | 38/47 [00:30<00:07,  1.17it/s] 83%|████████▎ | 39/47 [00:31<00:05,  1.44it/s] 85%|████████▌ | 40/47 [00:32<00:05,  1.36it/s] 87%|████████▋ | 41/47 [00:32<00:04,  1.32it/s] 89%|████████▉ | 42/47 [00:33<00:04,  1.24it/s] 91%|█████████▏| 43/47 [00:34<00:02,  1.51it/s] 94%|█████████▎| 44/47 [00:35<00:02,  1.25it/s] 96%|█████████▌| 45/47 [00:36<00:01,  1.22it/s] 98%|█████████▊| 46/47 [00:36<00:00,  1.31it/s]100%|██████████| 47/47 [00:37<00:00,  1.62it/s]100%|██████████| 47/47 [00:37<00:00,  1.26it/s]
-agg_by_pred_cluster
-is mutex assignment:: False
-assignment collision num:: 30
-linear_assign
-assignment shape=(120, 20071)
-instance label acc:: 0.19366666674613953
-reassign_by_pred_cluster
-  0%|          | 0/47 [00:00<?, ?it/s]  0%|          | 0/47 [00:00<?, ?it/s]
-missing label:: 25
-cluster acc 0.55925
-missing label:: 25
-iou voc:: 0.6551724137931034
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(120, 20071)
-instance label acc:: 0.5263333320617676
-reassign_by_pred_cluster
-  0%|          | 0/47 [00:00<?, ?it/s]  0%|          | 0/47 [00:00<?, ?it/s]
-missing label:: 25
-cluster acc 0.55925
-missing label:: 25
-iou voc:: 0.6551724137931034
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(120, 20071)
-instance label acc:: 0.5263333320617676
-reassign_by_pred_cluster
-  0%|          | 0/47 [00:00<?, ?it/s]  0%|          | 0/47 [00:00<?, ?it/s]
-missing label:: 25
-cluster acc 0.55925
-missing label:: 25
-iou voc:: 0.6551724137931034
-recall@3 = 0.8333333134651184
-  0%|          | 0/360 [00:00<?, ?it/s]  0%|          | 0/360 [00:00<?, ?it/s]
-desc=0 for gypsy
-desc=0 for mulatto
-  0%|          | 0/120 [00:00<?, ?it/s]  1%|          | 1/120 [00:01<02:16,  1.14s/it]  2%|▏         | 2/120 [00:02<02:17,  1.17s/it]  2%|▎         | 3/120 [00:03<02:04,  1.06s/it]  3%|▎         | 4/120 [00:04<01:57,  1.01s/it]  4%|▍         | 5/120 [00:05<01:54,  1.01it/s]  5%|▌         | 6/120 [00:06<01:55,  1.01s/it]  6%|▌         | 7/120 [00:07<01:52,  1.01it/s]  7%|▋         | 8/120 [00:08<01:50,  1.02it/s]  8%|▊         | 9/120 [00:09<01:47,  1.03it/s]  8%|▊         | 10/120 [00:10<01:47,  1.02it/s]  9%|▉         | 11/120 [00:11<01:55,  1.06s/it]  9%|▉         | 11/120 [00:11<01:54,  1.06s/it]
-Traceback (most recent call last):
-  File "vcd-baseline.py", line 680, in <module>
-    all_row_classifier = build_classifier_chatgpt(all_row_chatgpt_names, model, all_row_key_name=all_row_key_name)
-  File "/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
-    return func(*args, **kwargs)
-  File "vcd-baseline.py", line 442, in build_classifier_chatgpt
-    row_t = tokenize(row_t).to(args.device)
-  File "vcd-baseline.py", line 190, in tokenize
-    raise RuntimeError(f"Input {texts[i]} is too long for context length {context_length}")
-RuntimeError: Input a bad photo of the seizure-alert_dog The dog's breed or physical characteristics, which may suggest a specific breed commonly trained as seizure-alert dogs (such as a Golden Retriever or Labrador Retriever) or a specific size or shape that is advantageous for this role (such as a small dog that can easily be carried or a larger dog that can provide physical support). is too long for context length 77

@@ -1,170 +1,0 @@
-nohup: ignoring input
-/home/sheng/anaconda3/envs/gcd/lib/python3.8/site-packages/requests/__init__.py:102: RequestsDependencyWarning: urllib3 (1.26.11) or chardet (5.1.0)/charset_normalizer (2.0.4) doesn't match a supported version!
-  warnings.warn("urllib3 ({}) or chardet ({})/charset_normalizer ({}) doesn't match a supported "
-dataset size 3680
-missing keys:
-['visual.projection_head.0.weight', 'visual.projection_head.0.bias', 'visual.projection_head.2.weight', 'visual.projection_head.2.bias']
-Model parameters: 150,408,193
-Input resolution: 224
-Context length: 77
-Vocab size: 49408
-==============================
-pet
-  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:08<00:57,  8.16s/it] 25%|██▌       | 2/8 [00:09<00:24,  4.06s/it] 38%|███▊      | 3/8 [00:10<00:13,  2.80s/it] 50%|█████     | 4/8 [00:11<00:08,  2.16s/it] 62%|██████▎   | 5/8 [00:13<00:05,  1.85s/it] 75%|███████▌  | 6/8 [00:14<00:03,  1.63s/it] 88%|████████▊ | 7/8 [00:15<00:01,  1.51s/it]100%|██████████| 8/8 [00:15<00:00,  1.12s/it]100%|██████████| 8/8 [00:16<00:00,  2.01s/it]
-agg_by_pred_cluster
-is mutex assignment:: False
-assignment collision num:: 10
-linear_assign
-assignment shape=(37, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/8 [00:00<?, ?it/s]  0%|          | 0/8 [00:00<?, ?it/s]
-cluster acc 0.678804347826087
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(37, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/8 [00:00<?, ?it/s]  0%|          | 0/8 [00:00<?, ?it/s]
-cluster acc 0.678804347826087
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(37, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/8 [00:00<?, ?it/s]  0%|          | 0/8 [00:00<?, ?it/s]
-cluster acc 0.678804347826087
-scores {'nli-bert-large': 0.7243211356922984, 'all-mpnet-base-v2': 0.585749254833259}
-==============================
-cifar100
-  0%|          | 0/98 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-  1%|          | 1/98 [00:03<04:51,  3.00s/it]  2%|▏         | 2/98 [00:04<03:00,  1.88s/it]  3%|▎         | 3/98 [00:05<02:33,  1.62s/it]  4%|▍         | 4/98 [00:06<02:12,  1.41s/it]  5%|▌         | 5/98 [00:07<02:07,  1.37s/it]  6%|▌         | 6/98 [00:08<01:55,  1.26s/it]  7%|▋         | 7/98 [00:10<01:55,  1.27s/it]  8%|▊         | 8/98 [00:11<01:48,  1.20s/it]  9%|▉         | 9/98 [00:12<01:49,  1.23s/it] 10%|█         | 10/98 [00:13<01:44,  1.19s/it] 11%|█         | 11/98 [00:14<01:45,  1.22s/it] 12%|█▏        | 12/98 [00:15<01:41,  1.17s/it] 13%|█▎        | 13/98 [00:17<01:42,  1.21s/it] 14%|█▍        | 14/98 [00:18<01:38,  1.17s/it] 15%|█▌        | 15/98 [00:19<01:40,  1.21s/it] 16%|█▋        | 16/98 [00:20<01:36,  1.17s/it] 17%|█▋        | 17/98 [00:21<01:37,  1.21s/it] 18%|█▊        | 18/98 [00:23<01:33,  1.17s/it] 19%|█▉        | 19/98 [00:24<01:35,  1.21s/it] 20%|██        | 20/98 [00:25<01:31,  1.17s/it] 21%|██▏       | 21/98 [00:26<01:33,  1.21s/it] 22%|██▏       | 22/98 [00:27<01:29,  1.17s/it] 23%|██▎       | 23/98 [00:29<01:30,  1.21s/it] 24%|██▍       | 24/98 [00:30<01:25,  1.16s/it] 26%|██▌       | 25/98 [00:31<01:27,  1.20s/it] 27%|██▋       | 26/98 [00:32<01:23,  1.16s/it] 28%|██▊       | 27/98 [00:33<01:25,  1.20s/it] 29%|██▊       | 28/98 [00:34<01:22,  1.18s/it] 30%|██▉       | 29/98 [00:36<01:24,  1.22s/it] 31%|███       | 30/98 [00:37<01:20,  1.19s/it] 32%|███▏      | 31/98 [00:38<01:21,  1.22s/it] 33%|███▎      | 32/98 [00:39<01:18,  1.19s/it] 34%|███▎      | 33/98 [00:41<01:19,  1.22s/it] 35%|███▍      | 34/98 [00:42<01:16,  1.19s/it] 36%|███▌      | 35/98 [00:43<01:16,  1.22s/it] 37%|███▋      | 36/98 [00:44<01:13,  1.19s/it] 38%|███▊      | 37/98 [00:45<01:14,  1.22s/it] 39%|███▉      | 38/98 [00:46<01:10,  1.18s/it] 40%|███▉      | 39/98 [00:48<01:11,  1.22s/it] 41%|████      | 40/98 [00:49<01:08,  1.18s/it] 42%|████▏     | 41/98 [00:50<01:09,  1.22s/it] 43%|████▎     | 42/98 [00:51<01:05,  1.18s/it] 44%|████▍     | 43/98 [00:53<01:06,  1.21s/it] 45%|████▍     | 44/98 [00:54<01:03,  1.18s/it] 46%|████▌     | 45/98 [00:55<01:04,  1.21s/it] 47%|████▋     | 46/98 [00:56<01:01,  1.17s/it] 48%|████▊     | 47/98 [00:57<01:01,  1.21s/it] 49%|████▉     | 48/98 [00:58<00:57,  1.16s/it] 50%|█████     | 49/98 [01:00<00:58,  1.20s/it] 51%|█████     | 50/98 [01:01<00:56,  1.17s/it] 52%|█████▏    | 51/98 [01:02<00:56,  1.20s/it] 53%|█████▎    | 52/98 [01:03<00:53,  1.16s/it] 54%|█████▍    | 53/98 [01:04<00:54,  1.20s/it] 55%|█████▌    | 54/98 [01:05<00:51,  1.16s/it] 56%|█████▌    | 55/98 [01:07<00:51,  1.20s/it] 57%|█████▋    | 56/98 [01:08<00:48,  1.17s/it] 58%|█████▊    | 57/98 [01:09<00:49,  1.21s/it] 59%|█████▉    | 58/98 [01:10<00:46,  1.17s/it] 60%|██████    | 59/98 [01:12<00:47,  1.21s/it] 61%|██████    | 60/98 [01:13<00:44,  1.18s/it] 62%|██████▏   | 61/98 [01:14<00:44,  1.21s/it] 63%|██████▎   | 62/98 [01:15<00:41,  1.16s/it] 64%|██████▍   | 63/98 [01:16<00:42,  1.21s/it] 65%|██████▌   | 64/98 [01:17<00:39,  1.15s/it] 66%|██████▋   | 65/98 [01:19<00:39,  1.20s/it] 67%|██████▋   | 66/98 [01:20<00:37,  1.16s/it] 68%|██████▊   | 67/98 [01:21<00:37,  1.20s/it] 69%|██████▉   | 68/98 [01:22<00:34,  1.15s/it] 70%|███████   | 69/98 [01:23<00:34,  1.19s/it] 71%|███████▏  | 70/98 [01:24<00:32,  1.15s/it] 72%|███████▏  | 71/98 [01:26<00:32,  1.20s/it] 73%|███████▎  | 72/98 [01:27<00:30,  1.16s/it] 74%|███████▍  | 73/98 [01:28<00:29,  1.20s/it] 76%|███████▌  | 74/98 [01:29<00:27,  1.16s/it] 77%|███████▋  | 75/98 [01:30<00:27,  1.20s/it] 78%|███████▊  | 76/98 [01:31<00:25,  1.15s/it] 79%|███████▊  | 77/98 [01:33<00:25,  1.20s/it] 80%|███████▉  | 78/98 [01:34<00:23,  1.17s/it] 81%|████████  | 79/98 [01:35<00:22,  1.20s/it] 82%|████████▏ | 80/98 [01:36<00:20,  1.16s/it] 83%|████████▎ | 81/98 [01:37<00:20,  1.20s/it] 84%|████████▎ | 82/98 [01:39<00:18,  1.16s/it] 85%|████████▍ | 83/98 [01:40<00:17,  1.20s/it] 86%|████████▌ | 84/98 [01:41<00:16,  1.16s/it] 87%|████████▋ | 85/98 [01:42<00:15,  1.20s/it] 88%|████████▊ | 86/98 [01:43<00:13,  1.17s/it] 89%|████████▉ | 87/98 [01:45<00:13,  1.20s/it] 90%|████████▉ | 88/98 [01:46<00:11,  1.17s/it] 91%|█████████ | 89/98 [01:47<00:10,  1.20s/it] 92%|█████████▏| 90/98 [01:48<00:09,  1.17s/it] 93%|█████████▎| 91/98 [01:49<00:08,  1.21s/it] 94%|█████████▍| 92/98 [01:50<00:07,  1.17s/it] 95%|█████████▍| 93/98 [01:52<00:06,  1.20s/it] 96%|█████████▌| 94/98 [01:53<00:04,  1.16s/it] 97%|█████████▋| 95/98 [01:54<00:03,  1.20s/it] 98%|█████████▊| 96/98 [01:55<00:02,  1.15s/it] 99%|█████████▉| 97/98 [01:56<00:01,  1.19s/it]100%|██████████| 98/98 [01:57<00:00,  1.05s/it]100%|██████████| 98/98 [01:57<00:00,  1.20s/it]
-agg_by_pred_cluster
-is mutex assignment:: False
-assignment collision num:: 9
-linear_assign
-assignment shape=(100, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/98 [00:00<?, ?it/s]  0%|          | 0/98 [00:01<?, ?it/s]
-cluster acc 0.49944
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(100, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/98 [00:00<?, ?it/s]  0%|          | 0/98 [00:02<?, ?it/s]
-cluster acc 0.49976
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(100, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/98 [00:00<?, ?it/s]  0%|          | 0/98 [00:02<?, ?it/s]
-cluster acc 0.49976
-scores {'nli-bert-large': 0.6203114809060096, 'all-mpnet-base-v2': 0.4262533641412668}
-==============================
-sun
-  0%|          | 0/213 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-  0%|          | 1/213 [00:18<1:06:23, 18.79s/it]  1%|          | 2/213 [00:22<35:36, 10.13s/it]    1%|▏         | 3/213 [00:24<21:15,  6.07s/it]  2%|▏         | 4/213 [00:25<14:26,  4.14s/it]  2%|▏         | 5/213 [00:27<12:07,  3.50s/it]  3%|▎         | 6/213 [00:52<36:38, 10.62s/it]  3%|▎         | 7/213 [00:52<25:27,  7.41s/it]  4%|▍         | 8/213 [00:53<18:10,  5.32s/it]  4%|▍         | 9/213 [01:10<30:29,  8.97s/it]  5%|▍         | 10/213 [01:20<31:37,  9.35s/it]  5%|▌         | 11/213 [01:22<23:03,  6.85s/it]  6%|▌         | 12/213 [01:23<17:11,  5.13s/it]  6%|▌         | 13/213 [01:24<13:11,  3.96s/it]  7%|▋         | 14/213 [01:35<19:42,  5.94s/it]  7%|▋         | 15/213 [01:36<14:54,  4.52s/it]  8%|▊         | 16/213 [01:37<11:38,  3.55s/it]  8%|▊         | 17/213 [01:40<10:37,  3.25s/it]  8%|▊         | 18/213 [01:43<10:52,  3.35s/it]  9%|▉         | 19/213 [01:44<08:45,  2.71s/it]  9%|▉         | 20/213 [01:46<07:20,  2.28s/it] 10%|▉         | 21/213 [01:56<14:50,  4.64s/it] 10%|█         | 22/213 [02:08<21:43,  6.83s/it] 11%|█         | 23/213 [02:09<16:16,  5.14s/it] 11%|█▏        | 24/213 [02:10<12:32,  3.98s/it] 12%|█▏        | 25/213 [02:16<13:46,  4.40s/it] 12%|█▏        | 26/213 [02:26<19:07,  6.14s/it] 13%|█▎        | 27/213 [02:27<14:31,  4.68s/it] 13%|█▎        | 28/213 [02:28<11:17,  3.66s/it] 14%|█▎        | 29/213 [02:31<10:05,  3.29s/it] 14%|█▍        | 30/213 [02:38<13:15,  4.34s/it] 15%|█▍        | 31/213 [02:39<10:19,  3.40s/it] 15%|█▌        | 32/213 [02:40<08:17,  2.75s/it] 15%|█▌        | 33/213 [02:46<11:13,  3.74s/it] 16%|█▌        | 34/213 [02:53<14:18,  4.80s/it] 16%|█▋        | 35/213 [02:55<11:05,  3.74s/it] 17%|█▋        | 36/213 [02:56<08:46,  2.98s/it] 17%|█▋        | 37/213 [03:09<17:25,  5.94s/it] 18%|█▊        | 38/213 [03:10<13:10,  4.51s/it] 18%|█▊        | 39/213 [03:11<10:15,  3.54s/it] 19%|█▉        | 40/213 [03:12<08:10,  2.84s/it] 19%|█▉        | 41/213 [03:26<17:11,  6.00s/it] 20%|█▉        | 42/213 [03:27<13:02,  4.58s/it] 20%|██        | 43/213 [03:28<10:06,  3.57s/it] 21%|██        | 44/213 [03:29<08:03,  2.86s/it] 21%|██        | 45/213 [03:41<15:29,  5.53s/it] 22%|██▏       | 46/213 [03:42<11:49,  4.25s/it] 22%|██▏       | 47/213 [03:44<09:13,  3.33s/it] 23%|██▎       | 48/213 [03:45<07:25,  2.70s/it] 23%|██▎       | 49/213 [04:02<18:58,  6.94s/it] 23%|██▎       | 50/213 [04:03<14:09,  5.21s/it] 24%|██▍       | 51/213 [04:04<10:49,  4.01s/it] 24%|██▍       | 52/213 [04:05<08:32,  3.19s/it] 25%|██▍       | 53/213 [04:17<15:16,  5.73s/it] 25%|██▌       | 54/213 [04:18<11:34,  4.37s/it] 26%|██▌       | 55/213 [04:20<09:03,  3.44s/it] 26%|██▋       | 56/213 [04:21<07:14,  2.77s/it] 27%|██▋       | 57/213 [04:35<16:06,  6.20s/it] 27%|██▋       | 58/213 [04:36<12:10,  4.72s/it] 28%|██▊       | 59/213 [04:37<09:24,  3.66s/it] 28%|██▊       | 60/213 [04:39<07:27,  2.93s/it] 29%|██▊       | 61/213 [04:48<12:15,  4.84s/it] 29%|██▉       | 62/213 [04:49<09:25,  3.75s/it] 30%|██▉       | 63/213 [04:50<07:30,  3.00s/it] 30%|███       | 64/213 [04:52<06:06,  2.46s/it] 31%|███       | 65/213 [05:06<14:42,  5.96s/it] 31%|███       | 66/213 [05:07<11:08,  4.55s/it] 31%|███▏      | 67/213 [05:08<08:36,  3.54s/it] 32%|███▏      | 68/213 [05:09<06:51,  2.84s/it] 32%|███▏      | 69/213 [05:20<12:45,  5.32s/it] 33%|███▎      | 70/213 [05:22<09:46,  4.10s/it] 33%|███▎      | 71/213 [05:23<07:41,  3.25s/it] 34%|███▍      | 72/213 [05:24<06:11,  2.63s/it] 34%|███▍      | 73/213 [05:32<09:53,  4.24s/it] 35%|███▍      | 74/213 [05:40<12:29,  5.39s/it] 35%|███▌      | 75/213 [05:41<09:30,  4.14s/it] 36%|███▌      | 76/213 [05:43<07:28,  3.27s/it] 36%|███▌      | 77/213 [05:52<11:30,  5.08s/it] 37%|███▋      | 78/213 [05:56<11:01,  4.90s/it] 37%|███▋      | 79/213 [05:58<08:28,  3.80s/it] 38%|███▊      | 80/213 [05:59<06:43,  3.03s/it] 38%|███▊      | 81/213 [06:12<13:17,  6.04s/it] 38%|███▊      | 82/213 [06:21<14:55,  6.84s/it] 39%|███▉      | 83/213 [06:22<11:09,  5.15s/it] 39%|███▉      | 84/213 [06:23<08:34,  3.99s/it] 40%|███▉      | 85/213 [06:38<15:12,  7.13s/it] 40%|████      | 86/213 [06:43<13:53,  6.56s/it] 41%|████      | 87/213 [06:44<10:23,  4.95s/it] 41%|████▏     | 88/213 [06:45<08:00,  3.84s/it] 42%|████▏     | 89/213 [06:52<09:51,  4.77s/it] 42%|████▏     | 90/213 [06:55<08:15,  4.03s/it] 43%|████▎     | 91/213 [06:56<06:30,  3.20s/it] 43%|████▎     | 92/213 [06:57<05:14,  2.60s/it] 44%|████▎     | 93/213 [07:16<14:49,  7.42s/it] 44%|████▍     | 94/213 [07:17<11:00,  5.55s/it] 45%|████▍     | 95/213 [07:18<08:22,  4.26s/it] 45%|████▌     | 96/213 [07:19<06:30,  3.34s/it] 46%|████▌     | 97/213 [07:48<21:09, 10.94s/it] 46%|████▌     | 98/213 [07:49<15:23,  8.03s/it] 46%|████▋     | 99/213 [07:50<11:21,  5.98s/it] 47%|████▋     | 100/213 [07:52<08:36,  4.57s/it] 47%|████▋     | 101/213 [08:07<14:38,  7.84s/it] 48%|████▊     | 102/213 [08:08<10:51,  5.87s/it] 48%|████▊     | 103/213 [08:10<08:11,  4.47s/it] 49%|████▉     | 104/213 [08:11<06:20,  3.49s/it] 49%|████▉     | 105/213 [08:31<15:25,  8.57s/it] 50%|████▉     | 106/213 [08:32<11:19,  6.35s/it] 50%|█████     | 107/213 [08:34<08:29,  4.81s/it] 51%|█████     | 108/213 [08:35<06:34,  3.75s/it] 51%|█████     | 109/213 [08:49<11:48,  6.81s/it] 52%|█████▏    | 110/213 [08:50<08:50,  5.15s/it] 52%|█████▏    | 111/213 [08:51<06:44,  3.96s/it] 53%|█████▎    | 112/213 [08:53<05:16,  3.14s/it] 53%|█████▎    | 113/213 [09:07<11:05,  6.66s/it] 54%|█████▎    | 114/213 [09:11<09:13,  5.59s/it] 54%|█████▍    | 115/213 [09:12<07:12,  4.42s/it] 54%|█████▍    | 116/213 [09:14<05:48,  3.59s/it] 55%|█████▍    | 117/213 [09:33<13:09,  8.23s/it] 55%|█████▌    | 118/213 [10:00<22:03, 13.93s/it] 56%|█████▌    | 119/213 [10:01<15:51, 10.12s/it] 56%|█████▋    | 120/213 [10:03<11:32,  7.45s/it] 57%|█████▋    | 121/213 [10:19<15:24, 10.04s/it] 57%|█████▋    | 122/213 [10:37<18:46, 12.38s/it] 58%|█████▊    | 123/213 [10:38<13:35,  9.06s/it] 58%|█████▊    | 124/213 [10:39<09:59,  6.74s/it] 59%|█████▊    | 125/213 [11:02<16:45, 11.43s/it] 59%|█████▉    | 126/213 [11:18<18:44, 12.93s/it] 60%|█████▉    | 127/213 [11:20<13:45,  9.60s/it] 60%|██████    | 128/213 [11:21<10:00,  7.06s/it] 61%|██████    | 129/213 [12:06<25:43, 18.37s/it] 61%|██████    | 130/213 [12:10<19:39, 14.22s/it] 62%|██████▏   | 131/213 [12:12<14:16, 10.44s/it] 62%|██████▏   | 132/213 [12:14<10:34,  7.84s/it] 62%|██████▏   | 133/213 [12:41<18:06, 13.58s/it] 63%|██████▎   | 134/213 [12:50<16:08, 12.26s/it] 63%|██████▎   | 135/213 [12:51<11:39,  8.96s/it] 64%|██████▍   | 136/213 [12:53<08:41,  6.78s/it] 64%|██████▍   | 137/213 [13:07<11:28,  9.06s/it] 65%|██████▍   | 138/213 [13:18<12:00,  9.60s/it] 65%|██████▌   | 139/213 [13:20<08:55,  7.24s/it] 66%|██████▌   | 140/213 [13:21<06:48,  5.60s/it] 66%|██████▌   | 141/213 [14:09<21:48, 18.18s/it] 67%|██████▋   | 142/213 [14:10<15:29, 13.09s/it] 67%|██████▋   | 143/213 [14:12<11:16,  9.67s/it] 68%|██████▊   | 144/213 [14:13<08:17,  7.21s/it] 68%|██████▊   | 145/213 [14:33<12:32, 11.06s/it] 69%|██████▊   | 146/213 [14:38<10:19,  9.25s/it] 69%|██████▉   | 147/213 [14:40<07:43,  7.02s/it] 69%|██████▉   | 148/213 [14:42<05:50,  5.40s/it] 70%|██████▉   | 149/213 [15:04<10:57, 10.27s/it] 70%|███████   | 150/213 [15:12<10:13,  9.73s/it] 71%|███████   | 151/213 [15:14<07:36,  7.37s/it] 71%|███████▏  | 152/213 [15:16<05:46,  5.68s/it] 72%|███████▏  | 153/213 [15:28<07:40,  7.68s/it] 72%|███████▏  | 154/213 [15:38<08:20,  8.49s/it] 73%|███████▎  | 155/213 [15:40<06:15,  6.47s/it] 73%|███████▎  | 156/213 [15:42<04:48,  5.07s/it] 74%|███████▎  | 157/213 [16:08<10:41, 11.45s/it] 74%|███████▍  | 158/213 [16:30<13:17, 14.50s/it] 75%|███████▍  | 159/213 [16:32<09:37, 10.70s/it] 75%|███████▌  | 160/213 [16:33<07:04,  8.01s/it] 76%|███████▌  | 161/213 [16:36<05:33,  6.41s/it] 76%|███████▌  | 162/213 [16:41<05:03,  5.94s/it] 77%|███████▋  | 163/213 [16:43<03:55,  4.71s/it] 77%|███████▋  | 164/213 [16:45<03:08,  3.84s/it] 77%|███████▋  | 165/213 [16:57<05:14,  6.56s/it] 78%|███████▊  | 166/213 [17:08<05:59,  7.64s/it] 78%|███████▊  | 167/213 [17:09<04:30,  5.89s/it] 79%|███████▉  | 168/213 [17:11<03:28,  4.64s/it] 79%|███████▉  | 169/213 [17:15<03:12,  4.38s/it] 80%|███████▉  | 170/213 [17:26<04:38,  6.48s/it] 80%|████████  | 171/213 [17:28<03:33,  5.08s/it] 81%|████████  | 172/213 [17:30<02:47,  4.09s/it] 81%|████████  | 173/213 [17:34<02:49,  4.24s/it] 82%|████████▏ | 174/213 [18:07<08:11, 12.59s/it] 82%|████████▏ | 175/213 [18:08<05:48,  9.17s/it] 83%|████████▎ | 176/213 [18:09<04:11,  6.79s/it] 83%|████████▎ | 177/213 [18:13<03:35,  5.98s/it] 84%|████████▎ | 178/213 [18:21<03:53,  6.68s/it] 84%|████████▍ | 179/213 [18:23<02:52,  5.06s/it] 85%|████████▍ | 180/213 [18:24<02:09,  3.91s/it] 85%|████████▍ | 181/213 [18:31<02:37,  4.93s/it] 85%|████████▌ | 182/213 [18:42<03:26,  6.65s/it] 86%|████████▌ | 183/213 [18:43<02:30,  5.03s/it] 86%|████████▋ | 184/213 [18:44<01:52,  3.88s/it] 87%|████████▋ | 185/213 [18:53<02:31,  5.40s/it] 87%|████████▋ | 186/213 [19:00<02:38,  5.88s/it] 88%|████████▊ | 187/213 [19:01<01:56,  4.47s/it] 88%|████████▊ | 188/213 [19:03<01:27,  3.51s/it] 89%|████████▊ | 189/213 [19:07<01:28,  3.69s/it] 89%|████████▉ | 190/213 [19:13<01:40,  4.35s/it] 90%|████████▉ | 191/213 [19:14<01:15,  3.42s/it] 90%|█████████ | 192/213 [19:15<00:57,  2.76s/it] 91%|█████████ | 193/213 [19:16<00:45,  2.29s/it] 91%|█████████ | 194/213 [19:22<01:03,  3.35s/it] 92%|█████████▏| 195/213 [19:23<00:48,  2.72s/it] 92%|█████████▏| 196/213 [19:25<00:38,  2.27s/it] 92%|█████████▏| 197/213 [19:39<01:36,  6.04s/it] 93%|█████████▎| 198/213 [19:44<01:24,  5.66s/it] 93%|█████████▎| 199/213 [19:45<01:00,  4.32s/it] 94%|█████████▍| 200/213 [19:47<00:43,  3.38s/it] 94%|█████████▍| 201/213 [19:54<00:56,  4.70s/it] 95%|█████████▍| 202/213 [19:56<00:40,  3.65s/it] 95%|█████████▌| 203/213 [19:57<00:29,  2.94s/it] 96%|█████████▌| 204/213 [19:58<00:21,  2.43s/it] 96%|█████████▌| 205/213 [20:09<00:40,  5.10s/it] 97%|█████████▋| 206/213 [20:10<00:27,  3.87s/it] 97%|█████████▋| 207/213 [20:11<00:17,  2.89s/it] 98%|█████████▊| 208/213 [20:24<00:28,  5.76s/it] 98%|█████████▊| 209/213 [20:33<00:27,  6.82s/it] 99%|█████████▊| 210/213 [20:34<00:15,  5.16s/it] 99%|█████████▉| 211/213 [20:35<00:07,  3.92s/it]100%|█████████▉| 212/213 [20:43<00:05,  5.09s/it]100%|██████████| 213/213 [20:43<00:00,  3.66s/it]100%|██████████| 213/213 [20:44<00:00,  5.84s/it]
-agg_by_pred_cluster
-is mutex assignment:: False
-assignment collision num:: 66
-linear_assign
-assignment shape=(397, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/213 [00:00<?, ?it/s]  0%|          | 0/213 [00:07<?, ?it/s]
-cluster acc 0.5007539952553469
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(397, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/213 [00:00<?, ?it/s]  0%|          | 0/213 [00:07<?, ?it/s]
-cluster acc 0.500708019934899
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(397, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/213 [00:00<?, ?it/s]  0%|          | 0/213 [00:09<?, ?it/s]
-cluster acc 0.500708019934899
-scores {'nli-bert-large': 0.7444426173998752, 'all-mpnet-base-v2': 0.5930100820416933}
-==============================
-caltech101
-  0%|          | 0/14 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-  7%|▋         | 1/14 [00:05<01:06,  5.08s/it] 14%|█▍        | 2/14 [00:06<00:35,  2.98s/it] 21%|██▏       | 3/14 [00:07<00:22,  2.08s/it] 29%|██▊       | 4/14 [00:08<00:17,  1.77s/it] 36%|███▌      | 5/14 [00:09<00:13,  1.50s/it] 43%|████▎     | 6/14 [00:11<00:11,  1.44s/it] 50%|█████     | 7/14 [00:12<00:09,  1.29s/it] 57%|█████▋    | 8/14 [00:13<00:07,  1.29s/it] 64%|██████▍   | 9/14 [00:14<00:05,  1.20s/it] 71%|███████▏  | 10/14 [00:15<00:04,  1.23s/it] 79%|███████▊  | 11/14 [00:16<00:03,  1.17s/it] 86%|████████▌ | 12/14 [00:18<00:02,  1.20s/it] 93%|█████████▎| 13/14 [00:19<00:01,  1.15s/it]100%|██████████| 14/14 [00:19<00:00,  1.03it/s]100%|██████████| 14/14 [00:19<00:00,  1.43s/it]
-agg_by_pred_cluster
-is mutex assignment:: False
-assignment collision num:: 9
-linear_assign
-assignment shape=(97, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/14 [00:00<?, ?it/s]  0%|          | 0/14 [00:00<?, ?it/s]
-cluster acc 0.6002332701559994
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(97, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/14 [00:00<?, ?it/s]  0%|          | 0/14 [00:00<?, ?it/s]
-cluster acc 0.5984837439860038
-agg_by_pred_cluster
-is mutex assignment:: True
-assignment collision num:: 0
-linear_assign
-assignment shape=(97, 20071)
-reassign_by_pred_cluster
-  0%|          | 0/14 [00:00<?, ?it/s]  0%|          | 0/14 [00:00<?, ?it/s]
-cluster acc 0.5984837439860038
-scores {'nli-bert-large': 0.7035995758119452, 'all-mpnet-base-v2': 0.5408285199424879}
