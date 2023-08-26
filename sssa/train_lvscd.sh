@@ -4,11 +4,10 @@ DATASET=sdogs
 EXP_ID=test
 
 export TOKENIZERS_PARALLELISM=false
-# EXP_ID=soft_semicl-tau_self=1.0-tau_sup=0.07-w_cl=0.5-v2
-echo -e $(LC_TIME=en_US date)'\t'${DATASET}/${EXP_ID} >> /home/sheng/sssa/cache/exp_track.log
+echo -e $(LC_TIME=en_US date)'\t'${DATASET}/${EXP_ID} >> /home/sheng/sheng-eatamath/S3A/sssa/cache/exp_track.log
 
 # nohup \
-python -m train_lvscd_0722 \
+python -m train_lvscd \
 --dataset ${DATASET} \
 --device 'cuda:2' \
 --exp_id ${EXP_ID} \
@@ -28,13 +27,7 @@ python -m train_lvscd_0722 \
 --llm_method 'vde' \
 --use_kmeans 'False' \
 --w_ssl_clu 0.25
-# --suffix "pos=0.4" \
 # >> cache/${DATASET}-${EXP_ID}.log 2>&1 &
 # --use_resume 'True' \
+# --suffix "pos=0.4" \
 # --resume_ckpt /home/sheng/MUST-output/${DATASET}/${EXP_ID}/checkpoint-current.pth
-# --suffix "pos=0.05" \
-
-# --fpath_preclustering '/home/sheng/MUST-output/make_nonliving26/baseline-04_22_1/pred_kmeans_t.npy' \
-
-# --fpath_preclustering_chatgpt '' \
-# --fpath_preclustering '/home/sheng/MUST-output/make_nonliving26/chatgpt_init-warmup=2/pred_kmeans_t.npy'

@@ -82,69 +82,6 @@ class DataAugmentation:
         
         return images_weak, images_strong, self.mask_generator()
     
-    
-class FileListDataset(Dataset):
-    def __init__(self, image_file, label_file, transform=None, target_transform=None):
-        self.transform = transform
-        self.target_transform = target_transform
-        self.images = np.load(image_file)
-        self.labels = np.load(label_file)
-
-    def __getitem__(self, index):
-        image = pil_loader(self.images[index])
-        target = self.labels[index]
-
-        if self.transform is not None:
-            sample = self.transform(image)
-
-        if self.target_transform is not None:
-            target = self.target_transform(target)
-
-        return sample, target
-
-    def __len__(self):
-        return len(self.images)
-    
-    
-def build_dataset(is_train, args, train_config=None):
-    transform = build_transform(is_train, args, train_config)
-
-    print("Transform = ")
-    if isinstance(transform, tuple):
-        for trans in transform:
-            print(" - - - - - - - - - - ")
-            for t in trans.transforms:
-                print(t)
-    elif isinstance(transform, DataAugmentation):     
-        for T in transform.transforms:
-            print(" - - - - - - - - - - ")
-            for t in T.transforms:
-                print(t)   
-    else:
-        for t in transform.transforms:
-            print(t)                
-    print("---------------------------")
-
-    catalog = json.load(open('dataset_catalog.json','r'))
-    assert args.dataset in catalog.keys(), "Dataset %s is not implemented"%args.dataset
-    
-    entry = catalog[args.dataset]
-    if entry['type'] == 'special':
-        if args.dataset == 'cifar10':
-            dataset = datasets.CIFAR10(entry['path'], train=is_train, transform=transform, download=True)
-        elif args.dataset == 'cifar100':
-            dataset = datasets.CIFAR100(entry['path'], train=is_train, transform=transform, download=True)              
-    elif entry['type']=='imagefolder':
-        dataset = datasets.ImageFolder(os.path.join(entry['path'], entry['train'] if is_train else entry['test']), 
-                                       transform=transform)
-    else:     
-        path = entry['train'] if is_train else entry['test']
-        image_file = os.path.join(entry['path'], path + '_images.npy')
-        label_file = os.path.join(entry['path'], path + '_labels.npy')
-        target_transform = None
-        dataset = FileListDataset(image_file, label_file, transform, target_transform)    
-
-    return dataset
 
 
 def build_transform(is_train, args, train_config=None):

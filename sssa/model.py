@@ -26,7 +26,7 @@ from tqdm import tqdm
 from clip.model import build_model
 from clip.simple_tokenizer import SimpleTokenizer as _Tokenizer
 
-from data.vocab import get_classifier_wordnet, get_classifier
+from data.vocab import get_classifier
 
 _tokenizer = _Tokenizer()
 
@@ -232,101 +232,25 @@ def tokenize(texts: Union[str, List[str]], context_length: int = 77, truncate: b
 
     return result
 
-
+    
+    
 class clip_classifier(nn.Module):
-    
-    def __init__(self, args, is_train=False):        
-        super().__init__()
-
-        self.templates = json.load(open(args.template,'r'))
-        self.templates = self.templates[args.dataset]
-        
-        classnames = json.load(open(args.classname,'r'))
-        self.classnames = classnames[args.dataset]
-        
-        self.model = load(args.clip_model,jit=False,mask=args.mask)
-        self.model.float()
-        self.init_classifier_weights(args) 
-        
-        self.model = self.model.to(args.device) 
-        
-        
-    def init_classifier_weights(self, args):
-
-        print(f"{len(self.classnames)} classes, {len(self.templates)} templates")
-
-        with torch.no_grad():
-            zeroshot_weights = []
-            for classname in tqdm(self.classnames):
-                texts = [template.format(classname) for template in self.templates] #format with class
-                texts = tokenize(texts).to(args.device) #tokenize
-                class_embeddings = self.model.encode_text(texts) #embed with text encoder
-                class_embeddings /= class_embeddings.norm(dim=-1, keepdim=True)
-                class_embedding = class_embeddings.mean(dim=0)
-                class_embedding /= class_embedding.norm()
-                zeroshot_weights.append(class_embedding)
-                
-        self.model.visual.classifier = nn.Parameter(torch.stack(zeroshot_weights, dim=1).to(args.device))        
-        
-        # delete unused modules
-        del self.model.transformer, self.model.token_embedding, self.model.positional_embedding, self.model.ln_final, self.model.text_projection, self.model.logit_scale 
-        
-        return
-
-        
-    def forward(self,images,**kwargs):
-        return self.model.visual(images,**kwargs)
-    
-    
-class clip_classifier_oszsl(nn.Module):
     def __init__(self, args, is_train=True):
         super().__init__()
-
-        # self.templates = json.load(open(args.template,'r'))
-        # self.templates = self.templates[args.dataset]
-        
-        # classnames = json.load(open(args.classname,'r'))
-        # self.classnames = classnames[args.dataset]
-        
         self.model = load(args.clip_model, device=args.device, jit=False, mask=args.mask)
         self.model.float()
         self.devices = [int(args.device.split(':')[-1])] if args.devices is None else args.devices
         if is_train:
             self.init_classifier_weights(args) 
             self.model = self.model.to(args.device)
-            # if args.devices is not None:
-            #     self.model = nn.DataParallel(self.model, args.devices)
-            #     self.num_classes = self.model.module.visual.classifier.size(1)
-            # else:
             self.num_classes = self.model.visual.classifier.size(1)
         return
         
         
     def init_classifier_weights(self, args):
-
-        # print(f"{len(self.classnames)} classes, {len(self.templates)} templates")
-
-        # with torch.no_grad():
-        #     zeroshot_weights = []
-        #     for classname in tqdm(self.classnames):
-        #         texts = [template.format(classname) for template in self.templates] #format with class
-        #         texts = tokenize(texts).to(args.device) #tokenize
-        #         class_embeddings = self.model.encode_text(texts) #embed with text encoder
-        #         class_embeddings /= class_embeddings.norm(dim=-1, keepdim=True)
-        #         class_embedding = class_embeddings.mean(dim=0)
-        #         class_embedding /= class_embedding.norm()
-        #         zeroshot_weights.append(class_embedding)
         classifier = get_classifier(args)
         self.model.visual.classifier = nn.Parameter((classifier/classifier.norm(dim=-1, keepdim=True)).T, requires_grad=False)
-        # self.model.visual.classifier = nn.utils.weight_norm(nn.Linear(in_features=classifier.size(0), out_features=classifier.size(1), requires_grad=args.classifier_requires_grad))
-        # (classifier/classifier.norm(dim=-1, keepdim=True)).T
-        # self.model.visual.classifier.weight_g.data.fill_(1)
-        # self.model.visual.classifier.weight_g.requires_grad = False
-        # delete unused modules
-        # self.classifier_requires_grad = args.classifier_requires_grad
-        
         del self.model.transformer, self.model.token_embedding, self.model.positional_embedding, self.model.ln_final, self.model.text_projection, self.model.logit_scale 
-        
         return
     
     def get_visual_encoder(self):

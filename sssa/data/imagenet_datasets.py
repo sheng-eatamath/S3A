@@ -39,12 +39,12 @@ in100_subsample_classes = [
        601, 654, 261, 456, 386, 982, 909, 693, 236, 501, 497, 874, 452,
        494, 923, 279, 638, 485, 568, 108, 367, 644
 ]
-def get_datasets_oszsl(args, vocab=None, is_train=False, transform=None, seed=0, **kwargs):
+
+def get_datasets_rzsc(args, vocab=None, is_train=False, transform=None, seed=0, **kwargs):
     if is_train:
         root_dataset = root_imagenet
     else:
         root_dataset = root_imagenet_val
-        
         
     np.random.seed(seed)
     if args.dataset in ['imagenet']:
@@ -68,35 +68,24 @@ def get_datasets_oszsl(args, vocab=None, is_train=False, transform=None, seed=0,
         dataset.preprocess(None, None)
         dataset.ssl_cluster = None
         dataset.ad_weight = None
-    elif args.dataset in ['imagenet21k']:
-        if is_train:
-            root_dataset = root_imagenet21k
-        else:
-            root_dataset = root_imagenet21k_val
-        args.sub_classes = np.random.choice(range(len(os.listdir(root_dataset))), size=(args.n_sampled_classes), replace=False)
-        dataset = ImageNetDataset(root=root_dataset, vocab=vocab, transform=transform, sub_classes=args.sub_classes, hier_dataset_name=None)
-        dataset.subset_classes(args.sub_classes.tolist())
-        dataset.preprocess(None, None)
-        dataset.ssl_cluster = None
-        dataset.ad_weight = None
     elif args.dataset == 'sdogs':
-        dataset = SDOGS(root='/home/sheng/dataset/StanfordDogs', train=is_train, transform=transform, vocab=vocab)
+        dataset = SDOGS(root=f'{HOME}/dataset/StanfordDogs', train=is_train, transform=transform, vocab=vocab)
         dataset.ssl_cluster = None
         dataset.ad_weight = None
     elif args.dataset == 'cifar100':
         args.label_dataset = True
-        dataset = CustomCIFAR100(root='/home/sheng/dataset/CIFAR100/', train=is_train, transform=transform, vocab=vocab)
+        dataset = CustomCIFAR100(root=f'{HOME}/dataset/CIFAR100/', train=is_train, transform=transform, vocab=vocab)
         dataset.ssl_cluster = None
         dataset.ad_weight = None
     elif args.dataset == 'caltech101':
         args.label_dataset = True
-        dataset = CaltechDataset(root='/home/sheng/dataset/Caltech101/caltech-101/caltech101/101_ObjectCategories/', split='train' if is_train else 'test', transform=transform, vocab=vocab, **kwargs)
+        dataset = CaltechDataset(root=f'{HOME}/dataset/Caltech101/caltech-101/caltech101/101_ObjectCategories/', split='train' if is_train else 'test', transform=transform, vocab=vocab, **kwargs)
         dataset.preprocess()
         dataset.ssl_cluster = None
         dataset.ad_weight = None
     elif args.dataset == 'pet':
         args.label_dataset = True
-        dataset = OxfordIIITPet(root='/home/sheng/dataset/pet', split='trainval' if is_train else 'test', transform=transform, vocab=vocab)
+        dataset = OxfordIIITPet(root=f'{HOME}/dataset/pet', split='trainval' if is_train else 'test', transform=transform, vocab=vocab)
     else:
         raise NotImplementedError()
     return dataset
@@ -423,7 +412,6 @@ class Vocab:
         self.indexing()
         ### {global_synset: global_names}
         self.mapping_ids_names = dict(zip(vocab['ids'], vocab['names']))
-        # self.mapping_names_ids = dict(zip(vocab['names'], vocab['ids']))
         ### {local_idx: local_names}
         self.mapping_idx_names = dict(zip(range(len(self.classnames)), self.classnames))
         ### {local_names: local_idx}
