@@ -1,0 +1,8 @@
+HOME = '/home/sheng'
+PROJECT_HOME = f'{HOME}/sheng-eatamath/S3A'
+info_dir = f'{PROJECT_HOME}/breeds_hier/modified'
+root_imagenet = f'{HOME}/dataset/imagenet-img/'
+root_imagenet_val = f'{HOME}/dataset/imagenet-val-raw/'
+vocab_fpath=f'{PROJECT_HOME}/wordnet_nouns.pkl'
+output_dir = f'{HOME}/model-output'
+vocab_dir = f'{PROJECT_HOME}/ipynb/cache/vocabulary'

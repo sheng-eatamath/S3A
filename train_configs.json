@@ -1,0 +1,172 @@
+{       
+    "imagenet_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 5,
+        "w_str": 0.25
+    },    
+    "imagenet1k_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },
+    "imagenet21k_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },  
+    "imagenet21k_1_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },  
+    "imagenet21k_2_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },  
+    "make_nonliving26_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 10,
+        "w_str": 0.25
+    },
+    "make_entity13_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },
+    "make_entity30_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },
+    "make_living17_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },
+    "sdogs_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },
+    "caltech101_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },
+    "pet_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.99,
+        "warm_it": 100,
+        "conf_threshold": 0.7,
+        "lr": 1e-5,
+        "epochs": 60,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },
+    "sun_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.99,
+        "warm_it": 500,
+        "conf_threshold": 0.4,
+        "lr": 1e-4,
+        "epochs": 20,
+        "eval_freq": 2,
+        "w_str": 0.25
+    },
+    "sun2_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.99,
+        "warm_it": 500,
+        "conf_threshold": 0.4,
+        "lr": 1e-4,
+        "epochs": 20,
+        "eval_freq": 2,
+        "w_str": 0.25
+    },
+    "cifar100_ViT-B/16": {
+        "model_patch_size": 16,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 500,
+        "conf_threshold": 0.3,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 2,
+        "w_str": 0.25
+    },
+    "sdogs_ViT-L/14": {
+        "model_patch_size": 14,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 2e-5,
+        "epochs": 30,
+        "eval_freq": 1,
+        "w_str": 0.25
+    },
+    "make_entity13_ViT-L/14": {
+        "model_patch_size": 14,
+        "model_ema_decay_init": 0.999,
+        "warm_it": 2000,
+        "conf_threshold": 0.5,
+        "lr": 4e-5,
+        "epochs": 30,
+        "eval_freq": 5,
+        "w_str": 0.25
+    }
+}

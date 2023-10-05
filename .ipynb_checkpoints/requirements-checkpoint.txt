@@ -1,0 +1,9 @@
+jupyterlab
+tqdm
+ipython
+seaborn
+ftfy
+regex
+timm
+networkx
+chardet
