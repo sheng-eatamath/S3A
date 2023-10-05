@@ -71,6 +71,7 @@ We release here our checkpoints/prompts for evaluations on all benchmarks in our
 | RZSC-OOV | CIFAR100           | 46.10/46.40                                     |        |       |
 | RZSC-OOV | Oxford-IIIT Pet    | 59.00/60.57                                     |        |       |
 
+Checkpoints coming soon...
 
 
 ### Training
