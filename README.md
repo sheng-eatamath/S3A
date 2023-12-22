@@ -62,8 +62,8 @@ nohup jupyter lab --allow-root >> ~/.jupyter.log 2>&1 &
 
 
 ### Models
-Download `cache.zip` from [link](https://drive.google.com/open?id=1DNiW-EgIWcIiLe-M0EStfdF8ERgZ4MIv&authuser=Eyisheng%40outlook.com&usp=drive_fs) and unzip it at `ipynb/`.
-We release here our checkpoints/prompts for evaluations on all benchmarks in our original paper:
+Download `cache.zip` from [link](https://drive.google.com/open?id=1DNiW-EgIWcIiLe-M0EStfdF8ERgZ4MIv&authuser=Eyisheng%40outlook.com&usp=drive_fs) and unzip it at `ipynb/`. All clusters and prompts are included.
+Specifically, we release here our checkpoints/prompts for each benchmark in our paper:
 
 | Setting  | Dataset            | Performance (Acc/Clu for RZSC, Acc/Acc for OOV) | Prompt                                                       | Model |
 | -------- | ------------------ | ----------------------------------------------- | ------------------------------------------------------------ | ----- |
