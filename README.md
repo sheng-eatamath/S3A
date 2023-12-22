@@ -1,4 +1,4 @@
-# S3A: Towards Realistic Zero-Shot Classification via Self Structural Semantic Alignment
+# S3A: Towards Realistic Zero-Shot Classification via Self Structural Semantic Alignment (AAAI'24)
 
 > [S3A: Towards Realistic Zero-Shot Classification via Self Structural Semantic Alignment](https://arxiv.org/abs/2308.12960)
 >
@@ -30,21 +30,28 @@ We propose a **Cluster-Vote-Prompt-Realign (CVPR)** algorithm to reliably derive
 
 All the incorporated datasets are prepared under the `{HOME}/dataset` directory, and `config.py` contains global path information.
 
-Change global file paths in `config.py` , and dataset paths in `data/imagenet_datasets.py` if necessary.
+Change global file paths in `config.py`, and dataset paths in `data/imagenet_datasets.py` if necessary.
 
 For environment setup, please follow the below instructions:
 
 ```
-conda create -n sssa python=3.8
+### create environment
+conda create -n sssa
 conda activate sssa
-conda install pytorch==1.10.1 torchvision==0.11.2 torchaudio==0.10.1 cudatoolkit=11.3 -c pytorch -c conda-forge -y
-conda install scipy -y
-conda upgrade torchvision
-pip install requirements.txt
+conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch -y
+conda install scipy ipykernel setuptools==58.0.4 -y
+pip install -r requirements.txt
 
 ### install dependent packages
-cd ./robustness
-pip install -v -e .
+mv robustness ./robustness_out
+cd ./robustness_out
+mv robustness ../
+cd ..
+rm -rf robustness_out
+
+### (optional) if use soft-score
+conda install -c conda-forge sentence-transformers
+pip uninstall clip
 
 ### add notebook environment
 python -m ipykernel install --user --name sssa
@@ -55,21 +62,22 @@ nohup jupyter lab --allow-root >> ~/.jupyter.log 2>&1 &
 
 
 ### Models
-Download `cache.zip` from [link](https://drive.google.com/drive/folders/1DN9Un1K63Wtxfq92cThQ8S0Q_8XgUbve?usp=sharing) and unzip it at `ipynb/`.
+Download `cache.zip` from [link]([https://drive.google.com/drive/folders/1DN9Un1K63Wtxfq92cThQ8S0Q_8XgUbve?usp=sharing](https://drive.google.com/open?id=1DNiW-EgIWcIiLe-M0EStfdF8ERgZ4MIv&authuser=Eyisheng%40outlook.com&usp=drive_fs)) and unzip it at `ipynb/`.
 We release here our checkpoints/prompts for evaluations on all benchmarks in our original paper:
 
-| Setting  | Dataset            | Performance (Acc/Clu for RZSC, Acc/Acc for OOV) | Prompt | Model |
-| -------- | ------------------ | ----------------------------------------------- | ------ | ----- |
-| RZSC     | StanfordDogs       | 58.94/62.19                                     |        |       |
-| RZSC     | ImageNet-100       | 52.08/82.76                                     |        |       |
-| RZSC     | ImageNet-1K        | 42.43/63.15                                     |        |       |
-| RZSC     | BREEDS-Living17    | 48.34/75.57                                     |        |       |
-| RZSC     | BREEDS-Nonliving26 | 56.20/75.97                                     |        |       |
-| RZSC     | BREEDS-Entity13    | 45.21/76.92                                     |        |       |
-| RZSC     | BREEDS-Entity30    | 50.41/76.14                                     |        |       |
-| RZSC-OOV | Caltech-101        | 55.29/55.55                                     |        |       |
-| RZSC-OOV | CIFAR100           | 46.10/46.40                                     |        |       |
-| RZSC-OOV | Oxford-IIIT Pet    | 59.00/60.57                                     |        |       |
+| Setting  | Dataset            | Performance (Acc/Clu for RZSC, Acc/Acc for OOV) | Prompt                                                       | Model |
+| -------- | ------------------ | ----------------------------------------------- | ------------------------------------------------------------ | ----- |
+| RZSC     | StanfordDogs       | 58.94/62.19                                     | [link](https://drive.google.com/open?id=1h7vy1yOFZmRuYALdc2gZQsKVyzXq77q4&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| RZSC     | ImageNet-100       | 52.08/82.76                                     | [link](https://drive.google.com/open?id=1gmAgzC32Uny4ssSOLSXhHh8N4dY9trPl&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| RZSC     | ImageNet-1K        | 42.43/63.15                                     | [link](https://drive.google.com/open?id=1gqMBjlop8tLiekhEtgQM3KrRU35_1OiO&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| RZSC     | BREEDS-Living17    | 48.34/75.57                                     | [link](https://drive.google.com/open?id=1gFnTdY2KX_FgZOPvBmUHkV_z6952z5KP&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| RZSC     | BREEDS-Nonliving26 | 56.20/75.97                                     | [link](https://drive.google.com/open?id=1gFyfh3KGJGCqR_q0DnlI5rBVoOOlZqAY&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| RZSC     | BREEDS-Entity13    | 45.21/76.92                                     | [link](https://drive.google.com/open?id=1gknNoDeFisoMkgELJAwba21wCYc41hz2&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| RZSC     | BREEDS-Entity30    | 50.41/76.14                                     | [link](https://drive.google.com/open?id=1guiarl1EXnlfydcWkfx4QlUfLs_C9nRu&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| RZSC-OOV | Caltech-101        | 55.29/55.55                                     | [link](https://drive.google.com/open?id=1g1MDVb-lBvPMam9Mlo3arbgqwKaG5FHS&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| RZSC-OOV | CIFAR100           | 46.10/46.40                                     | [link](https://drive.google.com/open?id=1g-wl4wCwkwdeQhIx6cpuQ3pXn3O8tbDb&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| RZSC-OOV | Oxford-IIIT Pet    | 59.00/60.57                                     | [link](https://drive.google.com/open?id=1g7cRZPRkJY0B35jB4bUiUPkYTNj_T4FG&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+
 
 Checkpoints coming soon...
 
