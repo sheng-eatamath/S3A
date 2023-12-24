@@ -90,11 +90,11 @@ The preparation includes two three simple steps:
 
 given a target dataset, we simply
 
-1. (Optional, since we provide the files) Run `Build-Vocabulary.ipynb` to build  our vocabulary from all ImageNet (-21K and -1K) classes (synsets listed in file `imagenet21k_wordnet_ids.txt`) based on WordNet synsets (listed in file `wordnet_nouns.pkl`). Since our text classifier is frozen, the extracted classifier is saved at `ipynb/cache/wordnet_classifier.pth` forCLIP `ViT-B/16` and `ipynb/cache/wordnet_classifier_L.pth` for CLIP `ViT-L/14`.
-2. (Optional, since we provide the files) Run `Clustering.ipynb` to compute the intial KMeans clusters on CLIP visual features. The resultant clustering will be saved in `ipynb/cache/cluster/`.
-3. (Optional, since we provide the files) Run CVPR algorithm with `CVPR-algo.ipynb` and obtain the results saved at `cache/training/cvpr_result-data={args.dataset}-clip(-L).pth`. The results provide the self training with structural and instance semantic alignment. Here, the CVPR algorithm provides the initial semantic structural alignment labels. Therefore, our CVPR algorithm will be executed per-epoch during online training in the step 2.
+1. (Optional) Run `Build-Vocabulary.ipynb` to build  our vocabulary from all ImageNet (-21K and -1K) classes (synsets listed in file `imagenet21k_wordnet_ids.txt`) based on WordNet synsets (listed in file `wordnet_nouns.pkl`). Since our text classifier is frozen, the extracted classifier is saved at `ipynb/cache/wordnet_classifier.pth` forCLIP `ViT-B/16` and `ipynb/cache/wordnet_classifier_L.pth` for CLIP `ViT-L/14`.
+2. (Optional) Run `Clustering.ipynb` to compute the intial KMeans clusters on CLIP visual features. The resultant clustering will be saved in `ipynb/cache/cluster/`.
+3. (Optional) Run CVPR algorithm with `CVPR-algo.ipynb` and obtain the results saved at `cache/training/cvpr_result-data={args.dataset}-clip(-L).pth`. The results provide the self training with structural and instance semantic alignment. Here, the CVPR algorithm provides the initial semantic structural alignment labels. Therefore, our CVPR algorithm will be executed per-epoch during online training in the step 2.
 
-The specific intructions are introduced in each notebook.
+The above steps are optional since we provide these files. Download `cache.zip` from [link](https://drive.google.com/open?id=1DNiW-EgIWcIiLe-M0EStfdF8ERgZ4MIv&authuser=Eyisheng%40outlook.com&usp=drive_fs) and unzip it at `ipynb/`. The specific instructions are introduced in each notebook.
 
 If you do not presume ground-truth cluster number K, then you may need to execute the last step explained below.
 
