@@ -39,8 +39,9 @@ For environment setup, please follow the below instructions:
 conda create -n sssa
 conda activate sssa
 conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch -y
-conda install scipy ipykernel setuptools==58.0.4 -y
+conda install scikit-learn tensorboard scipy ipykernel setuptools==58.0.4 -y
 pip install -r requirements.txt
+conda install -c conda-forge torchmetrics
 
 ### install dependent packages
 mv robustness ./robustness_out
