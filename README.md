@@ -66,18 +66,19 @@ nohup jupyter lab --allow-root >> ~/.jupyter.log 2>&1 &
 Download `cache.zip` from [link](https://drive.google.com/open?id=1DNiW-EgIWcIiLe-M0EStfdF8ERgZ4MIv&authuser=Eyisheng%40outlook.com&usp=drive_fs) and unzip it at `ipynb/`. All clusters and prompts are included.
 Specifically, we release here our checkpoints/prompts for each benchmark in our paper:
 
-| Setting  | Dataset            | Performance (Acc/Clu for RZSC, Acc/Acc for OOV) | Prompt                                                       | Model |
-| -------- | ------------------ | ----------------------------------------------- | ------------------------------------------------------------ | ----- |
-| RZSC     | StanfordDogs       | 58.94/62.19                                     | [link](https://drive.google.com/open?id=1h7vy1yOFZmRuYALdc2gZQsKVyzXq77q4&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
-| RZSC     | ImageNet-100       | 52.08/82.76                                     | [link](https://drive.google.com/open?id=1gmAgzC32Uny4ssSOLSXhHh8N4dY9trPl&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
-| RZSC     | ImageNet-1K        | 42.43/63.15                                     | [link](https://drive.google.com/open?id=1gqMBjlop8tLiekhEtgQM3KrRU35_1OiO&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
-| RZSC     | BREEDS-Living17    | 48.34/75.57                                     | [link](https://drive.google.com/open?id=1gFnTdY2KX_FgZOPvBmUHkV_z6952z5KP&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
-| RZSC     | BREEDS-Nonliving26 | 56.20/75.97                                     | [link](https://drive.google.com/open?id=1gFyfh3KGJGCqR_q0DnlI5rBVoOOlZqAY&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
-| RZSC     | BREEDS-Entity13    | 45.21/76.92                                     | [link](https://drive.google.com/open?id=1gknNoDeFisoMkgELJAwba21wCYc41hz2&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
-| RZSC     | BREEDS-Entity30    | 50.41/76.14                                     | [link](https://drive.google.com/open?id=1guiarl1EXnlfydcWkfx4QlUfLs_C9nRu&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
-| RZSC-OOV | Caltech-101        | 55.29/55.55                                     | [link](https://drive.google.com/open?id=1g1MDVb-lBvPMam9Mlo3arbgqwKaG5FHS&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
-| RZSC-OOV | CIFAR100           | 46.10/46.40                                     | [link](https://drive.google.com/open?id=1g-wl4wCwkwdeQhIx6cpuQ3pXn3O8tbDb&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
-| RZSC-OOV | Oxford-IIIT Pet    | 59.00/60.57                                     | [link](https://drive.google.com/open?id=1g7cRZPRkJY0B35jB4bUiUPkYTNj_T4FG&authuser=Eyisheng%40outlook.com&usp=drive_fs) |       |
+| Setting  | Dataset            | Prompt                                                       | Model                                                        |
+| -------- | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| RZSC     | StanfordDogs       | [link](https://drive.google.com/open?id=1h7vy1yOFZmRuYALdc2gZQsKVyzXq77q4&authuser=Eyisheng%40outlook.com&usp=drive_fs) | [link](https://drive.google.com/open?id=1hP62FAfguz71qoFPAFjfSXe-clhiySBG&authuser=Eyisheng%40outlook.com&usp=drive_fs) |
+| RZSC     | ImageNet-100       | [link](https://drive.google.com/open?id=1gmAgzC32Uny4ssSOLSXhHh8N4dY9trPl&authuser=Eyisheng%40outlook.com&usp=drive_fs) | [link](https://drive.google.com/open?id=1hHryDxCwrBzn4AV9DvNpbH1JYDCTbVNu&authuser=Eyisheng%40outlook.com&usp=drive_fs) |
+| RZSC     | ImageNet-1K        | [link](https://drive.google.com/open?id=1gqMBjlop8tLiekhEtgQM3KrRU35_1OiO&authuser=Eyisheng%40outlook.com&usp=drive_fs) | [link](https://drive.google.com/open?id=1hXPZzKdPrfhURY239ObEqngeiQd4xuf7&authuser=Eyisheng%40outlook.com&usp=drive_fs) |
+| RZSC     | BREEDS-Living17    | [link](https://drive.google.com/open?id=1gFnTdY2KX_FgZOPvBmUHkV_z6952z5KP&authuser=Eyisheng%40outlook.com&usp=drive_fs) | [link](https://drive.google.com/open?id=1hZDZd5KSjKzdadmrlk2O7M5irD2I2ecK&authuser=Eyisheng%40outlook.com&usp=drive_fs) |
+| RZSC     | BREEDS-Nonliving26 | [link](https://drive.google.com/open?id=1gFyfh3KGJGCqR_q0DnlI5rBVoOOlZqAY&authuser=Eyisheng%40outlook.com&usp=drive_fs) | [link](https://drive.google.com/open?id=1hPY7RVmaZjVGVv5OWaeYaxXVZvpDdC4D&authuser=Eyisheng%40outlook.com&usp=drive_fs) |
+| RZSC     | BREEDS-Entity13    | [link](https://drive.google.com/open?id=1gknNoDeFisoMkgELJAwba21wCYc41hz2&authuser=Eyisheng%40outlook.com&usp=drive_fs) | [link](https://drive.google.com/open?id=1hU0ng8xmutEcilsoDcq6sg0q3m7p77Tt&authuser=Eyisheng%40outlook.com&usp=drive_fs) |
+| RZSC     | BREEDS-Entity30    | [link](https://drive.google.com/open?id=1guiarl1EXnlfydcWkfx4QlUfLs_C9nRu&authuser=Eyisheng%40outlook.com&usp=drive_fs) | [link]()                                                     |
+| RZSC-OOV | Caltech-101        | [link](https://drive.google.com/open?id=1g1MDVb-lBvPMam9Mlo3arbgqwKaG5FHS&authuser=Eyisheng%40outlook.com&usp=drive_fs) |                                                              |
+| RZSC-OOV | CIFAR100           | [link](https://drive.google.com/open?id=1g-wl4wCwkwdeQhIx6cpuQ3pXn3O8tbDb&authuser=Eyisheng%40outlook.com&usp=drive_fs) |                                                              |
+| RZSC-OOV | Oxford-IIIT Pet    | [link](https://drive.google.com/open?id=1g7cRZPRkJY0B35jB4bUiUPkYTNj_T4FG&authuser=Eyisheng%40outlook.com&usp=drive_fs) |                                                              |
+
 
 
 Checkpoints coming soon...
