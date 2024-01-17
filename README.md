@@ -1,4 +1,4 @@
-# S3A: Towards Realistic Zero-Shot Classification via Self Structural Semantic Alignment (AAAI'24)
+# S3A: Towards Realistic Zero-Shot Classification via Self Structural Semantic Alignment (AAAI'24 Oral)
 
 > [S3A: Towards Realistic Zero-Shot Classification via Self Structural Semantic Alignment](https://arxiv.org/abs/2308.12960)
 >
